@@ -1,0 +1,233 @@
+body {
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    color: #fff;
+}
+a, a:hover, a:visited, a:active { 
+    color: #fff;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/**********/
+/* Layout */
+/**********/
+aside, footer, header, nav, section, article {
+    display: flex;
+    flex-direction: column;
+}
+body {
+    overflow: hidden;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-rows: auto 100px;
+    grid-template-areas:
+       "left main"
+       "bottom bottom";
+    height: 100vh;
+}
+aside {
+    background-color: #000;
+    grid-area: left;
+}
+header {
+    background: #111;
+    position: fixed;
+    width: calc(100vw - 250px);
+    left: 250px;
+}
+
+main {
+    background: #111;
+    grid-area: main;
+    min-height: calc(350px);
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    z-index: 3;
+}
+
+nav {
+    margin-top: 100px;
+}
+
+footer {
+    background: #222;
+    grid-area: bottom;
+}
+
+
+/***************************/
+/* Accessories & Florishes */
+/***************************/
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 4px solid transparent;
+    border-radius: 16px;
+    background-clip: padding-box;
+    min-height: 30px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: hsla(0,0%,100%,.3);
+}
+
+/***************************/
+/* Part A: Left Navigation */
+/***************************/
+
+#sidebar{
+    padding: 20px;
+}
+
+#sidebar h1 {
+    font-size: 2em;
+}
+
+#sidebar a {
+    padding: 5px;
+    color: lightgrey;
+}
+
+#sidebar .selected {
+    border-left-style: solid;
+    border-color: green;
+}
+
+/********************************/
+/* Part B: Header & Nav Styling */
+/********************************/
+
+header {
+    flex-direction: row-reverse;
+    padding: 15px;
+}
+
+#upgrade{
+    border: solid 1px lightgrey;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 30px;
+}
+
+#profile{
+    background-color: #202020;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 30px;
+}
+
+nav {
+    flex-direction: row;
+}
+
+nav a {
+    margin-left: 20px;
+    padding: 5px;
+    font-size: 1em;
+    font-family: "Copperplate", "Papyrus", fantasy;
+}
+
+nav .selected {
+    border-bottom-style: solid;
+    border-color: green;
+}
+
+/*************************/
+/* Part C: Artists Panel */
+/*************************/
+
+#featured-content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.artist-card{
+    width: 20%;
+    padding: 10px;
+}
+
+.artist-card img{
+    width: 100%;
+    border-radius: 200px;
+    padding: 15px;
+}
+
+.artist-card > div {
+    background-color: #202020;
+    border: solid 1px #202020;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.play-button{
+    color: #202020;
+}
+
+div h3{
+    font-size: 0.8em;
+}
+
+div p{
+    font-size: 0.8em;
+}
+
+/**************************/
+/* Part D: Responsive UIs */
+/**************************/
+
+@media screen and (max-width: 1200px) {
+    .artist-card{
+        width: 33.3%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .artist-card{
+        width: 50%;
+    }
+    #upgrade{
+        display: none;
+    }
+    #sidebar{
+        display: none;
+    }
+    body{
+        grid-template-areas:
+        "main main"
+        "bottom bottom";
+    } 
+    div h3{
+        font-size: 1em;
+    }
+}
+
+/**************************/
+/* Part E: Hover Effects*/
+/**************************/
+
+#sidebar .searchbar:hover{
+    color:white;
+}
+
+#sidebar .homebar:hover{
+    color:white;
+}
+
+nav #playlists:hover, nav #albums:hover{
+    border-bottom-style: solid;
+    border-color: green;
+}
+
+#upgrade:hover, #profile:hover {
+    opacity: 0.75;
+}
+
+#featured-content .artist-card:hover .play-button{
+    color: green;
+}
