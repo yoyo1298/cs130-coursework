@@ -1,6 +1,15 @@
+<!--
+    https://www.youtube.com/watch?v=9CY0V0JAgNU
+    https://www.youtube.com/watch?v=KcdBOoK3Pfw
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
    <head>     
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial scale=1.0">
+       <meta http.equiv="X_UA-Compatible" content="ie=edge">
        <link rel="stylesheet" href="style.css">
    </head>
    <body>
@@ -8,7 +17,8 @@
         <nav class="navbar">
             <a href="index.html">Home</a>
             <strong>Tennis</strong>
-            <a href="lessons.html">Private Lessons</a>
+            <a href="lessons.html">Lessons</a>
+            <a>Resume</a>
         </nav>
         <header>
             <h1>Tennis</h1><br>
@@ -16,7 +26,40 @@
             <h3>Achievements</h3><br>
             <h3>International Tournaments</h3><br>
         </header>
+
+
+        <div id = "map"></div>
+        <script>
+            function initMap(){
+                var location = {lat: -25.363, lng: 131.044}
+                var map = new google.maps.Map(document.getElementById("map"),{
+                    zoom: 4, 
+                    center: location
+                });
+            }
+        </script>
+
+        <script async defer src="https://maps.googleapis.com/maps/api/js?
+        key=AIzaSyA0ko38SR57PgUnsHNfamwgZqYjTI8jB9k&callback=initMap"></script>
+      
+
+
+        <div class = "carousel-container">
+            <div class="carousel-slide">
+                <img src="images/image1.jpg" alt="">
+                <img src="images/190326266_1893106667521226_7949316487225769705_n.jpg" alt="">
+                <img src="images/191245559_518657875980070_4854888574467971430_n.jpg" alt="">
+                <img src="images/191660501_810262559901376_5140067182548914897_n.jpg" alt="">
+            </div>
+        </div>
+        <button id="prevBtn">Prev</button>
+        <button id="nextBtn">Next</button>
+        <script src="project.js"></script>
         </main>
+
    </body>
 </html>
+
+
+
 
