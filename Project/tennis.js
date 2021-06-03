@@ -24,3 +24,15 @@ const achievementsinsert = () => {
 
 document.querySelector("#achievements").onclick = achievementsinsert;
 
+/*code from youtube video https://www.youtube.com/watch?v=KcdBOoK3Pfw&t=516s below */
+const carouselSlide = document.querySelector('.carousel-slide');
+const carouselImages = document.querySelectorAll('.carousel-slide img');
+
+const prevBtn = document.querySelector('#prevBtn');
+const nextBtn = document.querySelector('#nextBtn');
+
+let counter = 0;
+const size = carouselImages[2].clientWidth;
+
+carouselSlide.style.transform= 'translateX('+(-size * counter) + 'px)';
+/* end of code from yotube video*/
