@@ -16,18 +16,18 @@
        <main>
         <nav class="navbar">
             <a href="index.html">Home</a>
-            <strong>Tennis</strong>
+            <strong>Background</strong>
             <a href="lessons.html">Lessons</a>
-            <a>Resume</a>
+            <a id="login"> Log In</a>
         </nav>
-        <header>
-            <h1>Tennis</h1><br>
-            <h3>My Background</h3><br>
-            <h3>Achievements</h3><br>
-            <h3>International Tournaments</h3><br>
+        <header class="back">
+            <h3 id="background">My Background</h3>
+            <p id="background-content"> </p>
+            <h3 id="achievements">Achievements</h3>
+            <p id="achievements-content"> </p>
         </header>
 
-
+        <!--
         <div id = "map"></div>
         <script>
             function initMap(){
@@ -38,15 +38,13 @@
                 });
             }
         </script>
-
         <script async defer src="https://maps.googleapis.com/maps/api/js?
         key=AIzaSyA0ko38SR57PgUnsHNfamwgZqYjTI8jB9k&callback=initMap"></script>
-      
-
+        -->
 
         <div class = "carousel-container">
             <div class="carousel-slide">
-                <img src="images/image1.jpg" alt="">
+                <img src="images/image1.jpg"alt="">
                 <img src="images/190326266_1893106667521226_7949316487225769705_n.jpg" alt="">
                 <img src="images/191245559_518657875980070_4854888574467971430_n.jpg" alt="">
                 <img src="images/191660501_810262559901376_5140067182548914897_n.jpg" alt="">
@@ -54,9 +52,8 @@
         </div>
         <button id="prevBtn">Prev</button>
         <button id="nextBtn">Next</button>
-        <script src="project.js"></script>
         </main>
-
+        <script src="tennis.js"></script>
    </body>
 </html>
 

@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>     
+    <meta charset="UTF-8">
        <link rel="stylesheet" href="style.css">
    </head>
    <body>
        <main>
         <nav class="navbar">
             <a href="index.html">Home</a>
-            <a href="tennis.html">Tennis</a>
+            <a href="tennis.html">Background</a>
             <strong>Lessons</strong>
-            <a>Resume</a>
+            <a id="login"> Log In</a>
         </nav>
         <header>
-            <h1>Lessons</h1>
-            <h3 class="options">
-                <ul>
-                    <li>My Background<br></li>
-                    <li>Prices<br></li>
-                    <li>Available Locations<br></li>
-                    <li>Contact Information<br></li>
+            <div class="options">
+                    <h3 id ="prices">Prices</h3>
+                    <p id="prices-content"> </p>
+                    <h3 id="locations">Available Locations</h3>
+                    <p id="locations-content"> </p>
+                    <h3 id="contact">Contact Information</h3>
+                    <p id="contact-content"> </p>
                 </ul>
-            </h3>
+            </div>
         </header> 
         </main>
+        <script src="lessons.js"></script>
    </body>
 </html>
 
